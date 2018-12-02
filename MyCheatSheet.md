@@ -27,3 +27,11 @@
 3. Array of Objects 
 (Use file queryExample.md)
 
+## Install babel 
+>npm install babel-cli babel-preset-env
+Setup the .babelrc file as in graphql-basics
+
+## ES6 import/export statements
+
+> This is used to divide the code in multiple files, so code don't get messy.
+> Named exports as many as needed, default only one as in code files. 
