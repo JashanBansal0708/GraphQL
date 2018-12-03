@@ -42,3 +42,6 @@ Setup the .babelrc file as in graphql-basics
 > 5 scalar types
 > Custom types using the type name{ }
 > Operation arguments passing
+> Scalar Types array return and pass as an argument
+> Custom Types return type and pass as an argument
+> Reletional Data basics and relational data( all code in files)
