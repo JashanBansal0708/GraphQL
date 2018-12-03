@@ -34,4 +34,11 @@ Setup the .babelrc file as in graphql-basics
 ## ES6 import/export statements
 
 > This is used to divide the code in multiple files, so code don't get messy.
-> Named exports as many as needed, default only one as in code files. 
+> Named exports as many as needed, default only one as in code files.
+
+## GraphQL API
+> Create the API using graphql-yoga
+> Live Reload the server using nodemon by script nodemon src/index.js --exec bable-node
+> 5 scalar types
+> Custom types using the type name{ }
+> Operation arguments passing
