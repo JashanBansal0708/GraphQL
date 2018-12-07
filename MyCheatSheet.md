@@ -44,4 +44,11 @@ Setup the .babelrc file as in graphql-basics
 > Operation arguments passing
 > Scalar Types array return and pass as an argument
 > Custom Types return type and pass as an argument
-> Reletional Data basics and relational data( all code in files)
+> Relational Data basics and relational data( all code in files)
+> All mutations as update, delete, create are in the source files
+> Subscriptions for real time data handling
+
+## ES6 operations used
+> spread operator for create an object copy as obj = { ...obj }
+> destructuring objects and arrays
+> Enums as a new data type. Bound a particular number of constant values to their variables
