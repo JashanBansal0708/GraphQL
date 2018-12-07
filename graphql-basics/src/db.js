@@ -28,8 +28,8 @@ const posts = [{
 }, {
     id: '12',
     title: 'Programming Music',
-    body: '',
-    published: false,
+    body: 'This is an awesome programming music course',
+    published: true,
     author: '2'
 }]
 
