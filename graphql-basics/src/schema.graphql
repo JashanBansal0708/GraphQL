@@ -22,7 +22,7 @@ type Mutation{
 
 type Subscription {
     post : PostSubscriptionPayload!
-    comment(id:ID!): CommentSubscriptionPayload!
+    comment(postID: ID!): CommentSubscriptionPayload!
 }
 input createUserInput{
     name: String!

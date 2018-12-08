@@ -128,29 +128,29 @@ const Mutation = {
             post.body = data.body
         }
         if(typeof data.published === 'boolean'){
-            post.body = data.body
-            if( originalPost.published && !post.published){
-                pubsub.publish('post',{
-                    post : {
-                        mutation: 'DELETED',
-                        data: originalPost
-                    }
-                })
-            } else if( !originalPost.published && post.published){
-                pubsub.published('post', {
-                    post: {
-                        mutation: 'CREATED',
-                        data : post
-                    }
-                })
-            } else if( post.published ){
-                pubsub.publish('post', {
-                    post: {
-                        mutation: 'UPDTAED',
-                        data: post
-                    }
-                })
-            }
+            post.published = data.published
+        }
+        if( originalPost.published && !post.published){
+            pubsub.publish('post',{
+                post : {
+                    mutation: 'DELETED',
+                    data: originalPost
+                }
+            })
+        } else if( !originalPost.published && post.published){
+            pubsub.published('post', {
+                post: {
+                    mutation: 'CREATED',
+                    data : post
+                }
+            })
+        } else if( post.published ){
+            pubsub.publish('post', {
+                post: {
+                    mutation: 'UPDTAED',
+                    data: post
+                }
+            })
         }
         return post
     },
@@ -186,10 +186,10 @@ const Mutation = {
 
         const [deletedComment] = db.comments.splice(commentIndex,1)
         
-        pubsub.publish(`comment ${ args.data.post }`, {
+        pubsub.publish(`comment ${ deletedComment.post }`, {
             comment: {
                 mutation : 'DELETED',
-                data: comment
+                data: deletedComment
             }
         })
 
@@ -207,7 +207,7 @@ const Mutation = {
             comment.text = data.text
         }
 
-        pubsub.publish(`comment ${ args.data.post }`, {    
+        pubsub.publish(`comment ${ comment.post }`, {    
             comment: {
                 mutation : 'UPDATED',
                 data: comment

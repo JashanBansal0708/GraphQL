@@ -1,15 +1,16 @@
 const Subscription = {
     comment : {
-        subscribe(parent, { postId }, { db, pubsub }, info){
-            const post = db.posts.find( (post) => post.id === postId && post.published )
-            if( !post ){
+        subscribe(parent, { postID }, { db, pubsub }, info){
+            const post = db.posts.find((post) => post.id === postID)
+            
+            if(!post ){
                 throw new Error('Post not found')
             }
-            return pubsub.asyncIterator(`comment ${postId}`)
+            return pubsub.asyncIterator(`comment ${postID}`)
         }
     },
     post : {
-        subscribe(parent, { postId }, { pubsub }, info){
+        subscribe(parent, args , { pubsub }, info){
             return pubsub.asyncIterator('post')
         }
     }

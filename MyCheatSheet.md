@@ -48,7 +48,10 @@ Setup the .babelrc file as in graphql-basics
 > All mutations as update, delete, create are in the source files
 > Subscriptions for real time data handling
 
+> Babel spread operator transform plugin required to use spread operator
+
 ## ES6 operations used
+
 > spread operator for create an object copy as obj = { ...obj }
 > destructuring objects and arrays
 > Enums as a new data type. Bound a particular number of constant values to their variables
