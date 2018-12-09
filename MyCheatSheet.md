@@ -55,3 +55,11 @@ Setup the .babelrc file as in graphql-basics
 > spread operator for create an object copy as obj = { ...obj }
 > destructuring objects and arrays
 > Enums as a new data type. Bound a particular number of constant values to their variables
+
+## Plugins Installed
+> Setup postgreSQL by creating a new Heroku app 
+> Install pgAdmin which is a GUI for postreSQL used for Development purpose of Heroku postreSQL   
+> setup Docker toolbox which is dependency for Prisma(GraphQL Object Relational Model)
+
+## Prisma
+> Prisma is a GraphQL ORM which wraps around any type of database and setup the database as a GraphQL Api where we can perform the query, mutatioins and subscriptions.
